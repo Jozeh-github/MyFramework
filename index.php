@@ -1,0 +1,10 @@
+<?php
+require_once('comp/config.php');
+require_once('comp/functions.php');
+checkActualPage(@$_GET['page']);
+include_once('comp/head.php');
+include_once('comp/header.php');
+showActualPage();
+include_once('comp/footer.php');
+include_once('comp/foot.php');
+?>
