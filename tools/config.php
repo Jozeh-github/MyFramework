@@ -22,8 +22,8 @@ define('PATH_PAGE_JS', 'js/scripts.php');
 
 /* Inner page custom data */
 define('PAGE_NAME', serialize(array(
-	'main' => 'main',
-	'client-register' => 'clientRegister',
+	'PG_MAIN' => 'main',
+	'PG_CLIENT_REGISTER' => 'clientRegister',
 )));
 define('PAGE_TITLE', serialize(array(
 	'main' => 'Bienvenido!'

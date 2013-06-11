@@ -8,6 +8,8 @@ function makeAbsPath($file) {
 function checkActualPage($page) {
 	global $actualPage, $pageTitle;
 	if(!isset($page)) $page = 'main';
+	$page = 'PG_'.strtoupper($page);
+	$page = str_replace('-', '_', $page);
 	$output = unserialize(PAGE_NAME);
 	$actualPage = $output[$page];
 	$output = unserialize(PAGE_TITLE);
