@@ -71,4 +71,8 @@ function substringBetween($string, $leftLimit, $rightLimit) {
 	$ir = strpos($string, $rightLimit, $il);
 	return substr($string, $il, ($ir-$il));
 }
+function getBlock($block) {
+	$blockToInclude = trim(strtolower($block));
+	include('block/'.$blockToInclude.'.php');
+}
 ?>
