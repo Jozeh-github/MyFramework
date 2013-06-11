@@ -2,9 +2,9 @@
 require_once('tools/config.php');
 require_once('tools/functions.php');
 checkActualPage(@$_GET['page']);
-include_once('blocks/head.php');
-include_once('blocks/header.php');
+getBlock('head');
+getBlock('header');
 showActualPage();
-include_once('blocks/footer.php');
-include_once('blocks/foot.php');
+getBlock('footer');
+getBlock('foot');
 ?>
