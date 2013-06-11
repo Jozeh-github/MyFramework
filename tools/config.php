@@ -42,4 +42,10 @@ define('DB_SCHEMA', 'db_test');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_TYPE', 'mysql');
+
+/* Blocks variables */
+define('BLOCK_HEAD', 'head');
+define('BLOCK_HEADER', 'header');
+define('BLOCK_FOOTER', 'footer');
+define('BLOCK_FOOT', 'foot');
 ?>
