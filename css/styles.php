@@ -1,7 +1,7 @@
 <?php
-require_once('../comp/config.php');
-require_once('../comp/functions.php');
+require_once('../tools/config.php');
+require_once('../tools/functions.php');
 setContentType('text/css');
-include_once('comp/reset.css');
-include_once('comp/main.css');
+include_once('res/reset.css');
+include_once('res/main.css');
 ?>
