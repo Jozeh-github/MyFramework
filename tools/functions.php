@@ -73,6 +73,6 @@ function substringBetween($string, $leftLimit, $rightLimit) {
 }
 function getBlock($block) {
 	$blockToInclude = trim(strtolower($block));
-	include('block/'.$blockToInclude.'.php');
+	include('blocks/'.$blockToInclude.'.php');
 }
 ?>
