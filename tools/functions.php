@@ -44,7 +44,12 @@ function printPageTitle() {
 	echo isset($pageTitle) ? $pageTitle : SITE_NAME;
 }
 function getObjectClass() {
-	require_once('class/MyObject.php');
+	$class = ucfirst(CLASS_MAIN);
+	require_once('class/'.$class.'.php');
+}
+function getClass($class) {
+	$class = ucfirst($class);
+	require_once('class/'.$class.'.php');
 }
 function getConnectionLibrary() {
 	$dbTypes = unserialize(DB_TYPE_LIST);
