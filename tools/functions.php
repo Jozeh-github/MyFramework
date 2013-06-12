@@ -45,7 +45,7 @@ function printPageTitle() {
 }
 function getObjectClass() {
 	$class = ucfirst(CLASS_MAIN);
-	require_once('class/'.$class.'.php');
+	require_once('base/'.$class.'.php');
 }
 function getClass($class) {
 	$class = ucfirst($class);
@@ -53,7 +53,7 @@ function getClass($class) {
 }
 function getConnectionLibrary() {
 	$dbTypes = unserialize(DB_TYPE_LIST);
-	require_once('class/'.$dbTypes[DB_TYPE].'.php');
+	require_once('base/'.$dbTypes[DB_TYPE].'.php');
 }
 function getConnectionObject() {
 	$connectionObject = NULL;
@@ -72,9 +72,6 @@ function getMainJS() {
 }
 function getMainCSS() {
 	return makeRelPath(PATH_PAGE_CSS);
-}
-function importClass($className) {
-	include_once('class/'.$className.'.php');
 }
 function substringBetween($string, $leftLimit, $rightLimit) {
 	$il = strpos($string, $leftLimit, 0) + strlen($leftLimit);
