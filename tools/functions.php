@@ -43,6 +43,9 @@ function printPageTitle() {
 	global $pageTitle;
 	echo isset($pageTitle) ? $pageTitle : SITE_NAME;
 }
+function getObjectClass() {
+	require_once('class/MyObject.php');
+}
 function getConnectionLibrary() {
 	$dbTypes = unserialize(DB_TYPE_LIST);
 	require_once('class/'.$dbTypes[DB_TYPE].'.php');

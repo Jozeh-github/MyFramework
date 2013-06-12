@@ -1,9 +1,11 @@
 <?php
 class MyObject {
-	private $restrictedToGet;
-	private $restrictedToSet;
+	protected $connection;
+	protected $restrictedToGet;
+	protected $restrictedToSet;
 
-	function __construct() {
+	function sync() {
+		$this->connection = getConnectionObject();
 		$this->restrictedToGet = array();
 		$this->restrictedToSet = array();
 	}
@@ -11,7 +13,7 @@ class MyObject {
 		if(strpos($function, 'get') === 0)
 		{
 			$variable = strtolower(str_replace('get', '', $function));
-			if(in_array($variable, $this->restrictedToGet))
+			if(!in_array($variable, $this->restrictedToGet))
 			{
 				return $this->{$variable};
 			}
@@ -19,7 +21,7 @@ class MyObject {
 		elseif(strpos($function, 'set') === 0)
 		{
 			$variable = strtolower(str_replace('set', '', $function));
-			if(in_array($variable, $this->restrictedToSet))
+			if(!in_array($variable, $this->restrictedToSet))
 			{
 				$this->{$variable} = $params[0];
 			}
